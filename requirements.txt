@@ -1,0 +1,11 @@
+huggingface_hub
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+torch==2.5.1+cu121
+transformers==4.51.3
+datasets==3.6.0
+peft==0.15.2
+trl==0.15.2
+
+wheel
+flash-attn --no-build-isolation
