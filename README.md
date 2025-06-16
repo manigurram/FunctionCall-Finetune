@@ -1,4 +1,4 @@
-# Function Calling Fine-Tuning with LLaMA 3 and Gemma 3
+# Function Call Fine-Tuning with LLaMA 3 and Gemma 3
 
 This repository contains code for fine-tuning the **Gemma 3** and **LLaMA 3** models for **function calling tasks** using **LoRA (Low-Rank Adaptation)** and running inference with the fine-tuned models.
 
@@ -33,18 +33,18 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 ### 2. Dataset Format
 Your dataset should contain the following columns:
 
-`id`: Unique identifier for each sample
-`query`: User's question or request
-`tools`: JSON string containing available tools/functions
-`answers`: JSON string containing expected function calls
+* `id`: Unique identifier for each sample
+* `query`: User's question or request
+* `tools`: JSON string containing available tools/functions
+* `answers`: JSON string containing expected function calls
 
 
 ### 3. Fine-Tuning Steps
 1. Data Loading
-    Load the dataset using datasets.load_dataset.
+  * Load the dataset using datasets.load_dataset.
 2. Data Preprocessing
-  Convert instruction + input → prompt
-  Convert output → JSON-formatted string (target)
+  * Convert instruction + input → prompt
+  * Convert output → JSON-formatted string (target)
 3. Model Loading
 4. LoRA Adapter Injection
 5. Training Preparation
